@@ -22,7 +22,7 @@ namespace BubbleSort
             {
                 isSorted = true;
                 var prev = int.MinValue;
-                for (int i = 0; i < sortTo; i++)
+                for (var i = 0; i < sortTo; i++)
                 {
                     if (prev > nums[i])
                     {
@@ -34,22 +34,6 @@ namespace BubbleSort
                 sortTo--;
             }
             return nums;
-        }
-        
-        // Redundant and ineffienct check for sorted, using bool value instead now.
-        // Keeping it just because
-        static bool IsSorted(List<int> nums)
-        {
-            var prev = Int32.MinValue;
-            foreach (var num in nums)
-            {
-                if (prev > num)
-                {
-                    return false;
-                }
-                prev = num;
-            }
-            return true;
         }
     }
 }
